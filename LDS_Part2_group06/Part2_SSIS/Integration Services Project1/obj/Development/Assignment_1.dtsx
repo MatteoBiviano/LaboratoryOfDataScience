@@ -1,0 +1,2311 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/23/2021 5:39:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-HRGR69N"
+  DTS:CreatorName="DESKTOP-HRGR69N\matte"
+  DTS:DTSID="{C94FC8A5-4B01-4D00-A7BC-55A41E4E5AFF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment_1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{56947F63-6CB0-4953-A316-6E31364C637F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7E3A3AAD-1509-4F69-BE24-DF8AD20CEA56}"
+      DTS:ObjectName="Gestione connessione file flat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_id"
+              DTS:DTSID="{69CBBBCF-22DC-4BC8-B3C7-3FD09B6AF71C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_name"
+              DTS:DTSID="{FCDEC403-0FF1-4601-A1FD-9D9DF48B2A42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_id"
+              DTS:DTSID="{2DA6A6AC-C844-4744-AA49-7F127B865F8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{308BE182-3CF4-40AD-B486-210E2D112650}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match_lost"
+              DTS:DTSID="{09FBC912-7A00-4C97-98C4-DC61D973095B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{0F39D106-FCC7-4714-A9D2-953A401DE07A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F3F6904C-20F9-4AE8-AC41-8F7902363105}"
+      DTS:ObjectName="Gestione connessione file flat 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_id"
+              DTS:DTSID="{9DE9C778-98C1-4EBF-9775-8EB9DE7212C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_name"
+              DTS:DTSID="{08B6BC36-C4E6-47DD-B2A3-A6C0143ACB50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_id"
+              DTS:DTSID="{41F28950-A448-4F6C-A45B-846ECE843782}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{C23B7273-7A57-4BC7-98DD-B722CA49E4A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match_lost"
+              DTS:DTSID="{92464E50-9B3E-4503-B391-06CC0FC159CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{FD3AF944-DA58-40A7-9FC2-021B972379D1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B205B329-0BA2-4FBE-B829-356E91F0C26C}"
+      DTS:ObjectName="Gestione connessione file flat 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_id"
+              DTS:DTSID="{683BD9E0-F87B-4C55-8678-DB8245B7C218}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_id"
+              DTS:DTSID="{F091B8A4-B89C-4630-B4F3-82164BCE711F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="match_num"
+              DTS:DTSID="{B90E98F2-D2A6-403D-87F6-6C9602E7BF2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="max_match"
+              DTS:DTSID="{DDF78E98-04D8-4662-8890-AE856D9BF716}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_name"
+              DTS:DTSID="{1FF625D5-80B4-409D-931F-A160C60E2BCE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{B43A9E61-2355-478C-A612-C1D5C4935293}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BA74BC64-A6F0-464D-948E-66BB1697BE98}"
+      DTS:ObjectName="Gestione connessione file flat 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_id"
+              DTS:DTSID="{53317087-02DD-4798-9218-5C557B3C2CA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="loser_name"
+              DTS:DTSID="{80DBA3FE-7FBF-44CD-8555-140051C0A8C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_id"
+              DTS:DTSID="{E3E2E989-F168-4429-A3FA-38564B4279BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nemesis_name"
+              DTS:DTSID="{954464A8-7A1D-4755-8867-7FBB95E54D6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match_lost"
+              DTS:DTSID="{FD1EC4E2-F400-4BF8-88A5-E33EFE48E3B8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7A5FA784-D760-4AB7-AAF5-F0FA66F1AC9E}"
+      DTS:ObjectName="lds.di.unipi.it.Group_6_DB.Group_6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_6;Initial Catalog=Group_6_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtP3smgYyRE62M6fIgNcPXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAT3bYwP4dCA4QtFhA9JgPfznOBC0NhTBBgrtS/IpRGUwAAAAAOgAAAAAIAACAAAADoE7lsbaXpS2CAK7o/WzRKD3FfCWusgzgjNHkHSXmPoCAAAABLkBKpXQzob9w55ezzFS3dQjCDKuxhlxIZGiL4POggWUAAAABKkZDddI5odOM1913kH0Sv1O9zvIknk+cdFrs/yVbBNR/U0mU+3gogW1vZkGERy8ubz74UfG7Lv26EFSA/jMAd</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Solution Assignment1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{26DB2852-7FFC-4A67-B4C1-45E03D53B18A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Solution Assignment1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Solution Assignment1\Add loser name"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Add loser name"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_6].[Player]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_6].[Player]) [refTable]
+where [refTable].[player_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="player_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="old_player_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country_id" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="sex" dataType="DT_WSTR" length="1" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hand" dataType="DT_WSTR" length="1" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ht" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="byear_of_birth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[loser_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment1\Add loser name.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[loser_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">player_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Add loser name.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add loser name.Outputs[Output corrispondenza ricerca].Columns[loser_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="60"
+                      lineageId="Package\Solution Assignment1\Add loser name.Outputs[Output corrispondenza ricerca].Columns[loser_name]"
+                      name="loser_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Add loser name.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Add loser name.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add loser name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Add loser name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add loser name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Add loser name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Add winner name"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Add winner name"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_6].[Player]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_6].[Player]) [refTable]
+where [refTable].[player_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="player_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="old_player_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country_id" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="sex" dataType="DT_WSTR" length="1" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hand" dataType="DT_WSTR" length="1" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ht" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="byear_of_birth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[nemesis_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment1\Add winner name.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca].Columns[nemesis_id]"
+                      cachedDataType="i4"
+                      cachedName="nemesis_id"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[nemesis_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">player_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Add winner name.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add winner name.Outputs[Output corrispondenza ricerca].Columns[nemesis_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="60"
+                      lineageId="Package\Solution Assignment1\Add winner name.Outputs[Output corrispondenza ricerca].Columns[nemesis_name]"
+                      name="nemesis_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Add winner name.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Add winner name.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add winner name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Add winner name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Add winner name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Add winner name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Destinazione file flat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Destinazione file flat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment1\Destinazione file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat 3]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[loser_id]"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[loser_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].Columns[nemesis_id]"
+                      cachedDataType="i4"
+                      cachedName="nemesis_id"
+                      externalMetadataColumnId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[nemesis_id]"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[nemesis_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].Columns[loser_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="loser_name"
+                      externalMetadataColumnId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[loser_name]"
+                      lineageId="Package\Solution Assignment1\Add loser name.Outputs[Output corrispondenza ricerca].Columns[loser_name]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].Columns[nemesis_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="nemesis_name"
+                      externalMetadataColumnId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[nemesis_name]"
+                      lineageId="Package\Solution Assignment1\Add winner name.Outputs[Output corrispondenza ricerca].Columns[nemesis_name]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].Columns[max_match]"
+                      cachedDataType="ui8"
+                      cachedName="max_match"
+                      externalMetadataColumnId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[n_match_lost]"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[max_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[loser_id]"
+                      dataType="i4"
+                      name="loser_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[nemesis_id]"
+                      dataType="ui8"
+                      name="nemesis_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[loser_name]"
+                      dataType="i4"
+                      name="loser_name" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[nemesis_name]"
+                      dataType="ui8"
+                      name="nemesis_name" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[n_match_lost]"
+                      dataType="wstr"
+                      length="60"
+                      name="n_match_lost" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Group by loser"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Group by loser"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Group by loser.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Group by loser.Inputs[Input aggregazione 1].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Group by loser.Inputs[Input aggregazione 1].Columns[match_num]"
+                      cachedDataType="ui8"
+                      cachedName="match_num"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[loser_id]"
+                      name="loser_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[max_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[max_match]"
+                      name="max_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">7</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Group by loser &amp; winner"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Group by loser &amp; winner"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Group by loser &amp; winner.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Inputs[Input aggregazione 1].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[loser_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Inputs[Input aggregazione 1].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[winner_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Inputs[Input aggregazione 1].Columns[match_id]"
+                      cachedDataType="i4"
+                      cachedName="match_id"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]"
+                      name="loser_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[loser_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[winner_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]"
+                      name="match_num">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[loser_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro].Columns[max_match]"
+                      cachedDataType="ui8"
+                      cachedName="max_match"
+                      lineageId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[max_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join destro].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[loser_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join destro].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[winner_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Merge join.Inputs[Input merge join destro].Columns[match_num]"
+                      cachedDataType="ui8"
+                      cachedName="match_num"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[match_num]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[loser_id]"
+                      name="loser_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro].Columns[loser_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[nemesis_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[nemesis_id]"
+                      name="nemesis_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment1\Merge join.Inputs[Input merge join destro].Columns[winner_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[match_num]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[match_num]"
+                      name="match_num">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment1\Merge join.Inputs[Input merge join destro].Columns[match_num]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[max_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[max_match]"
+                      name="max_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro].Columns[max_match]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Solution Assignment1\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Multicast.Outputs[Output multicast 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\Solution Assignment1\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Multicast.Outputs[Output multicast 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\Solution Assignment1\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Order by Loser"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Order by Loser"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Order by Loser.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Order by Loser.Inputs[Input ordinamento].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      lineageId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[loser_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Order by Loser.Inputs[Input ordinamento].Columns[max_match]"
+                      cachedDataType="ui8"
+                      cachedName="max_match"
+                      lineageId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[max_match]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[loser_id]"
+                      name="loser_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[loser_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[max_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento].Columns[max_match]"
+                      name="max_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1].Columns[max_match]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Order by Loser 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Order by Loser 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\Order by Loser 1.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Inputs[Input ordinamento].Columns[loser_id]"
+                      cachedDataType="i4"
+                      cachedName="loser_id"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Inputs[Input ordinamento].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[winner_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Inputs[Input ordinamento].Columns[match_num]"
+                      cachedDataType="ui8"
+                      cachedName="match_num"
+                      lineageId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[loser_id]"
+                      name="loser_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[loser_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[winner_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[match_num]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento].Columns[match_num]"
+                      name="match_num">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1].Columns[match_num]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\Retrieve Match"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Retrieve Match"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_6].[Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment1\Retrieve Match.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]"
+                      name="match_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      name="winner_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[loser_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_id]"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].Columns[loser_id]"
+                      name="loser_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      dataType="i4"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      dataType="i4"
+                      name="match_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      dataType="i4"
+                      name="winner_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_id]"
+                      dataType="i4"
+                      name="loser_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="50"
+                      name="score" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[best_of]"
+                      dataType="i4"
+                      name="best_of" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[round]"
+                      dataType="wstr"
+                      length="10"
+                      name="round" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[minutes]"
+                      dataType="i4"
+                      name="minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_ace]"
+                      dataType="i4"
+                      name="w_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_df]"
+                      dataType="i4"
+                      name="w_df" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_svpt]"
+                      dataType="i4"
+                      name="w_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_1stIn]"
+                      dataType="i4"
+                      name="w_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_1stWon]"
+                      dataType="i4"
+                      name="w_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_2ndWon]"
+                      dataType="i4"
+                      name="w_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_SvGms]"
+                      dataType="i4"
+                      name="w_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_bpSaved]"
+                      dataType="i4"
+                      name="w_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_bpFaced]"
+                      dataType="i4"
+                      name="w_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_ace]"
+                      dataType="i4"
+                      name="l_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_df]"
+                      dataType="i4"
+                      name="l_df" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_svpt]"
+                      dataType="i4"
+                      name="l_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_1stIn]"
+                      dataType="i4"
+                      name="l_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_1stWon]"
+                      dataType="i4"
+                      name="l_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_2ndWon]"
+                      dataType="i4"
+                      name="l_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_SvGms]"
+                      dataType="i4"
+                      name="l_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_bpSaved]"
+                      dataType="i4"
+                      name="l_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_bpFaced]"
+                      dataType="i4"
+                      name="l_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_rank]"
+                      dataType="i4"
+                      name="winner_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_rank_points]"
+                      dataType="i4"
+                      name="winner_rank_points" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_rank]"
+                      dataType="i4"
+                      name="loser_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_rank_points]"
+                      dataType="i4"
+                      name="loser_rank_points" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      name="match_id" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      name="winner_id" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[loser_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[loser_id]"
+                      name="loser_id" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment1\select num match lost"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="select num match lost"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale].Columns[match_num]"
+                      cachedDataType="ui8"
+                      cachedName="match_num"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[match_num]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale].Columns[max_match]"
+                      cachedDataType="ui8"
+                      cachedName="max_match"
+                      lineageId="Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[max_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment1\select num match lost.Outputs[n_match_lost]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="n_match_lost"
+                  synchronousInputId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[match_num]} == #{Package\Solution Assignment1\Merge join.Outputs[Output merge join].Columns[max_match]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">match_num == max_match</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\select num match lost.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment1\select num match lost.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment1\select num match lost.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\select num match lost.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment1\select num match lost.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment1\select num match lost.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Solution Assignment1.Paths[Multicast Output 1]"
+              endId="Package\Solution Assignment1\Group by loser.Inputs[Input aggregazione 1]"
+              name="Multicast Output 1"
+              startId="Package\Solution Assignment1\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[n_match_lost]"
+              endId="Package\Solution Assignment1\Add loser name.Inputs[Input ricerca]"
+              name="n_match_lost"
+              startId="Package\Solution Assignment1\select num match lost.Outputs[n_match_lost]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output aggregazione 1]"
+              endId="Package\Solution Assignment1\Multicast.Inputs[Multicast Input 1]"
+              name="Output aggregazione 1"
+              startId="Package\Solution Assignment1\Group by loser &amp; winner.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output aggregazione 11]"
+              endId="Package\Solution Assignment1\Order by Loser.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Solution Assignment1\Group by loser.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output corrispondenza ricerca]"
+              endId="Package\Solution Assignment1\Add winner name.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Solution Assignment1\Add loser name.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Solution Assignment1\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Solution Assignment1\Add winner name.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output merge join]"
+              endId="Package\Solution Assignment1\select num match lost.Inputs[Input suddivisione condizionale]"
+              name="Output merge join"
+              startId="Package\Solution Assignment1\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output multicast 1]"
+              endId="Package\Solution Assignment1\Order by Loser 1.Inputs[Input ordinamento]"
+              name="Output multicast 1"
+              startId="Package\Solution Assignment1\Multicast.Outputs[Output multicast 1]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output ordinamento]"
+              endId="Package\Solution Assignment1\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Solution Assignment1\Order by Loser.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output ordinamento1]"
+              endId="Package\Solution Assignment1\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Solution Assignment1\Order by Loser 1.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Solution Assignment1.Paths[Output origine OLE DB]"
+              endId="Package\Solution Assignment1\Group by loser &amp; winner.Inputs[Input aggregazione 1]"
+              name="Output origine OLE DB"
+              startId="Package\Solution Assignment1\Retrieve Match.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Solution Assignment1"
+          TopLeft="284.071433315472,138.558825395512" />
+        <AnnotationLayout
+          Text="Assignment1: For any given player, his or her ”nemesis” is the player against whom he or she&#xD;&#xA;lost most matches. List every player with the respective nemesis and the number&#xD;&#xA;of matches lost."
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="517.6,72"
+          Id="83d6c249-7f85-4543-9d4f-aedabf4d7546"
+          TopLeft="126.428573581637,73.4117657354546" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Solution Assignment1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Solution Assignment1\Merge join"
+          TopLeft="642.667357639808,406.72353292947" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Solution Assignment1\Add winner name"
+          TopLeft="644.785725172685,480.563868192158" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Solution Assignment1\Retrieve Match"
+          TopLeft="414.810210902281,86.5588246662312" />
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Solution Assignment1\Order by Loser"
+          TopLeft="500.524498076272,332.735294106923" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Solution Assignment1\select num match lost"
+          TopLeft="388.381639023634,407.617649332462" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Solution Assignment1\Order by Loser 1"
+          TopLeft="782.667360023994,334.923528006828" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Solution Assignment1\Group by loser &amp; winner"
+          TopLeft="677.667357724958,84.4411771569697" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Solution Assignment1\Multicast"
+          TopLeft="708.381643451408,169.500001458561" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Solution Assignment1\Add loser name"
+          TopLeft="399.810210135936,488.500002370161" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Solution Assignment1\Destinazione file flat"
+          TopLeft="643.738265996805,587.34033963837" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Solution Assignment1\Group by loser"
+          TopLeft="501.238782270031,253.794119867074" />
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output origine OLE DB]"
+          TopLeft="563.610210902281,106.3000009116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.057146822677,0"
+              Start="0,0"
+              End="106.557146822677,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="106.557146822677,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output ordinamento1]"
+          TopLeft="861.467360023994,376.523528006828">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-134.800002384186,30.2000049226424"
+              Start="0,0"
+              End="-134.800002384186,22.7000049226424">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8962992134177" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8962992134177"
+                    Point2="0,17.8962992134177"
+                    Point3="-4,17.8962992134177" />
+                  <mssgle:LineSegment
+                    End="-130.800002384186,17.8962992134177" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-130.800002384186,17.8962992134177"
+                    Point2="-134.800002384186,17.8962992134177"
+                    Point3="-134.800002384186,21.8962992134177" />
+                  <mssgle:LineSegment
+                    End="-134.800002384186,22.7000049226424" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output ordinamento]"
+          TopLeft="574.524498076272,374.335294106923">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.142859563536,32.3882388225475"
+              Start="0,0"
+              End="112.142859563536,24.8882388225475">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.1930304133615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.1930304133615"
+                    Point2="0,19.1930304133615"
+                    Point3="4,19.1930304133615" />
+                  <mssgle:LineSegment
+                    End="108.142859563536,19.1930304133615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.142859563536,19.1930304133615"
+                    Point2="112.142859563536,19.1930304133615"
+                    Point3="112.142859563536,23.1930304133615" />
+                  <mssgle:LineSegment
+                    End="112.142859563536,24.8882388225475" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output multicast 1]"
+          TopLeft="787.048310118074,211.100001458561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74.4190499059197,123.823526548267"
+              Start="0,0"
+              End="74.4190499059197,116.323526548267">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5069647762668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5069647762668"
+                    Point2="0,50.5069647762668"
+                    Point3="4,50.5069647762668" />
+                  <mssgle:LineSegment
+                    End="70.4190499059197,50.5069647762668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70.4190499059197,50.5069647762668"
+                    Point2="74.4190499059197,50.5069647762668"
+                    Point3="74.4190499059197,54.5069647762668" />
+                  <mssgle:LineSegment
+                    End="74.4190499059197,116.323526548267" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output merge join]"
+          TopLeft="642.667357639808,427.970591130966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72.6857186161744,0"
+              Start="0,0"
+              End="-65.1857186161744,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-65.1857186161744,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output corrispondenza ricerca1]"
+          TopLeft="727.861995584745,522.163868192158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.176471446212"
+              Start="0,0"
+              End="0,57.676471446212">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.676471446212" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-75.44701171875,20.838235723106,150.8940234375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output corrispondenza ricerca]"
+          TopLeft="551.810210135936,505.33193528116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.9755150367496,0"
+              Start="0,0"
+              End="85.4755150367496,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.4755150367496,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-24.0481213878752,5,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output aggregazione 11]"
+          TopLeft="574.681640173152,295.394119867074">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.3411742398484"
+              Start="0,0"
+              End="0,29.8411742398484">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.8411742398484" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Output aggregazione 1]"
+          TopLeft="771.224500588183,126.04117715697">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.458824301591"
+              Start="0,0"
+              End="0,35.958824301591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.958824301591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[n_match_lost]"
+          TopLeft="477.495924579785,449.217649332462">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.2823530376988"
+              Start="0,0"
+              End="0,31.7823530376988">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7823530376988" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.2630078125,10.3599265188494,60.526015625,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment1.Paths[Multicast Output 1]"
+          TopLeft="749.714976784741,211.100001458561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-174.876194514709,42.6941184085134"
+              Start="0,0"
+              End="-174.876194514709,35.1941184085134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4147061929462" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4147061929462"
+                    Point2="0,17.4147061929462"
+                    Point3="-4,17.4147061929462" />
+                  <mssgle:LineSegment
+                    End="-170.876194514709,17.4147061929462" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170.876194514709,17.4147061929462"
+                    Point2="-174.876194514709,17.4147061929462"
+                    Point3="-174.876194514709,21.4147061929462" />
+                  <mssgle:LineSegment
+                    End="-174.876194514709,35.1941184085134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="1) Acquisizione dalla tabella Match &#xD;&#xA;(tramite comando OLE DB) dei dati:&#xA;- match_id&#xA;- winner_id        - loser_id"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="215.2,88"
+          Id="d8a365f0-8726-489b-bc86-49520e6036eb"
+          TopLeft="396.953067741033,7.68823389990524" />
+        <AnnotationLayout
+          Text="2) Group by per coppie di loser_id, winner_id&#xA;in modo da ottenere il numero di match (match_num) disputati&#xD;&#xA;dalle coppie &lt;loser, winner&gt;"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="362.4,72"
+          Id="6708824a-6295-495d-b35d-e8c4949d5c51"
+          TopLeft="676.953072509405,13.6999979944789" />
+        <AnnotationLayout
+          Text="3) Group by usando come granularità &#xD;&#xA;&quot;loser_id&quot; per ottenere il massimo &#xD;&#xA;numero di match persi &#xA;per ogni loser"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="230.4,88"
+          Id="ded05a39-5a31-4eb9-8b98-51ad9e6011c2"
+          TopLeft="268.993881888431,241.150417391899" />
+        <AnnotationLayout
+          Text="5) Selezioniamo le coppie loser_id, winner_id&#xA;che hanno numero di match uguali &#xA;al numero di match massimo persi dal loser"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="264,72"
+          Id="2d1a04ef-a1ab-43b9-a239-04d1b1913bbc"
+          TopLeft="131.23877750166,392.999159017319" />
+        <AnnotationLayout
+          Text="6) Utilizzo Lookup per aggiungere&#xA; il nome dei loser"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="208.8,56"
+          Id="1125d023-3f17-4033-94e8-6e41b748828b"
+          TopLeft="178.177553811226,483.671429196526" />
+        <AnnotationLayout
+          Text="7) Utilizzo Lookup per aggiungere&#xA; il nome dei winner (nemesis_name)"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="217.6,56"
+          Id="8f437527-50d6-4e5d-9863-a4818a864d54"
+          TopLeft="820.381646322162,476.02437026575" />
+        <AnnotationLayout
+          Text="4) Ordiniamo per Loser in modo di rincongiungere&#xD;&#xA;i due flussi tramite JOIN"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="296,56"
+          Id="305469f0-fe8c-4ae1-a1f8-586a1539edc9"
+          TopLeft="939.181641067222,369.51680616194" />
+        <AnnotationLayout
+          Text="8) Dopo aver aggiunto i nomi dei giocatori per migliorare&#xD;&#xA;la leggibilità del risultato, questo è stato salvato nel &#xD;&#xA;file &quot;output_assignment1.txt&quot;, nel formato:&#xD;&#xA;&quot;loser_id, loser_name, nemesis_id, nemesis_name, n_match_lost&quot;"
+          ParentId="Package\Solution Assignment1"
+          FontInfo="{assembly:Null}"
+          Size="365.6,88"
+          Id="d50abd09-150c-4f73-98ea-390bf3a4f834"
+          TopLeft="823.38164643164,540.927265667118" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment1\Add winner name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_6].[Player]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment1\Retrieve Match">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment1\Add loser name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_6].[Player]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

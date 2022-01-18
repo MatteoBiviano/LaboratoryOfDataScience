@@ -1,0 +1,2278 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/10/2021 11:44:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-HRGR69N"
+  DTS:CreatorName="DESKTOP-HRGR69N\matte"
+  DTS:DTSID="{0F721AE6-5DDA-4D3D-AECB-654BE102D6A5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment_2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{6919B74F-AB68-4976-9D29-018E6E8C2BB6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7DFDF83A-AC6C-40E8-9F48-2A55C23871C8}"
+      DTS:ObjectName="Gestione connessione file flat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\Part2\output_assignment2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match"
+              DTS:DTSID="{6447FBDF-D6C0-487F-9E38-90276473BAAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_id"
+              DTS:DTSID="{9217D6CC-264A-4B22-A382-879E58E0D6C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_name"
+              DTS:DTSID="{182217B4-F40B-4527-9A71-81980AE022B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{AAB3BA4D-C819-4252-A1EB-D0D5898177FB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9E4C4043-FDBB-43E2-97ED-566962B512B8}"
+      DTS:ObjectName="Gestione connessione file flat 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{3C65494F-5C28-4AAA-8159-C7A545EE51EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_id"
+              DTS:DTSID="{0D3095B2-B440-4E4A-ACA1-3CED7A4B0E78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_name"
+              DTS:DTSID="{F43D430A-8204-4602-88B3-74D249A517D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match"
+              DTS:DTSID="{F5EE215B-3712-4CD5-A789-46D7ADC44191}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="count_match"
+              DTS:DTSID="{5B15EFCF-792F-4DFB-A27B-C54A5240F41C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6A11BAB4-C64D-4C92-ABB8-1270E95364A8}"
+      DTS:ObjectName="Gestione connessione file flat 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\matte\Desktop\Magistrale\Laboratory of DataScience\Progetto LDS Biviano_Graziani\LDS_Part2_Group06\output_assignment2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="year"
+              DTS:DTSID="{25415909-E142-4526-98AF-81DAF34A1388}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_id"
+              DTS:DTSID="{645B22C8-B572-4FB4-B8EA-8350578B70ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_name"
+              DTS:DTSID="{152CDE3D-1614-432B-B68F-D8572F0D7111}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="n_match"
+              DTS:DTSID="{F6E495C6-BE73-4CFC-845D-1DCC4DA8B2D1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2FC698D4-BC6C-4FE0-9EB1-5709D232CACB}"
+      DTS:ObjectName="lds.di.unipi.it.Group_6_DB.Group_6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_6;Initial Catalog=Group_6_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtP3smgYyRE62M6fIgNcPXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOxlm0HfWVtsFb95117y9WobtmNvLZ/I2P0jup+sOwNgAAAAAOgAAAAAIAACAAAADpvGRm/Bu5yBaitdV8mqCBEfDXrIdYky2NjV5tghDEryAAAADrGFPKhUkWF5yXo/YDPDE4UWLx+bG/lWTOOJXpcj5LzEAAAABIRKT8YZ8wnK0SQiYABqtGAlBiRCmW5IseIkJTrZ6PZy8aaeQGeIEimNaVrcNDHDzJ7Z1wUVyJW8WhKtsa6ZWX</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Solution Assignment2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{6D1398E2-BF7C-4C3D-BE99-A273330B6371}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Solution Assignment2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Solution Assignment2\Add Tournament"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Add Tournament"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_6].[Tournament]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_6].[Tournament]) [refTable]
+where [refTable].[tourney_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="tourney_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="old_tourney_id" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="date_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tourney_name" dataType="DT_WSTR" length="60" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="surface" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="draw_size" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tourney_level" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tourney_spectators" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="tourney_revenue" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment2\Add Tournament.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca].Columns[tourney_id]"
+                      cachedDataType="i4"
+                      cachedName="tourney_id"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">tourney_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[date_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[date_id]"
+                      name="date_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">date_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[tourney_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="60"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[tourney_name]"
+                      name="tourney_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">tourney_name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Add Tournament.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Add Tournament.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Tournament.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Tournament.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Add Year"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Add Year"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_6].[Date]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_6].[Date]) [refTable]
+where [refTable].[date_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="date_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="day" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="month" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="quarter" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[date_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment2\Add Year.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca].Columns[date_id]"
+                      cachedDataType="i4"
+                      cachedName="date_id"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[date_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">date_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca].Columns[year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca].Columns[year]"
+                      name="year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">year</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Add Year.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Add Year.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Year.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Add Year.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Add Year.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Add Year.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Destinazione file flat"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="Destinazione file flat"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment2\Destinazione file flat.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].Columns[n_match]"
+                      cachedDataType="ui8"
+                      cachedName="n_match"
+                      externalMetadataColumnId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[n_match]"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[n_match]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].Columns[tourney_id]"
+                      cachedDataType="i4"
+                      cachedName="tourney_id"
+                      externalMetadataColumnId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[tourney_id]"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].Columns[tourney_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="tourney_name"
+                      externalMetadataColumnId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[tourney_name]"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_name]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[year]"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[year]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[n_match]"
+                      dataType="i4"
+                      name="n_match" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[tourney_id]"
+                      dataType="i4"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[tourney_name]"
+                      dataType="wstr"
+                      length="60"
+                      name="tourney_name" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[year]"
+                      dataType="ui8"
+                      name="year" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Group by Year"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Group by Year"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Group by Year.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year.Inputs[Input aggregazione 1].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year.Inputs[Input aggregazione 1].Columns[count_match]"
+                      cachedDataType="ui8"
+                      cachedName="count_match"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[year]"
+                      name="year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[n_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[n_match]"
+                      name="n_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">7</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Group by Year &amp; Tornament"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Group by Year &amp; Tornament"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      lineageId="Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1].Columns[tourney_id]"
+                      cachedDataType="i4"
+                      cachedName="tourney_id"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1].Columns[match_id]"
+                      cachedDataType="i4"
+                      cachedName="match_id"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1].Columns[tourney_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="tourney_name"
+                      lineageId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[tourney_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]"
+                      name="year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca].Columns[year]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_id]"
+                      name="tourney_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]"
+                      name="count_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_name]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_name]"
+                      name="tourney_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca].Columns[tourney_name]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[n_match]"
+                      cachedDataType="ui8"
+                      cachedName="n_match"
+                      lineageId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[n_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[tourney_id]"
+                      cachedDataType="i4"
+                      cachedName="tourney_id"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_id]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[tourney_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="tourney_name"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_name]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[count_match]"
+                      cachedDataType="ui8"
+                      cachedName="count_match"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[count_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[n_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[n_match]"
+                      name="n_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[n_match]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_id]"
+                      name="tourney_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[tourney_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_name]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[tourney_name]"
+                      name="tourney_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[tourney_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[year]"
+                      name="year"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[count_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[count_match]"
+                      name="count_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Solution Assignment2\Merge join.Inputs[Input merge join destro].Columns[count_match]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Solution Assignment2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Multicast.Outputs[Output multicast 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\Solution Assignment2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Multicast.Outputs[Output multicast 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\Solution Assignment2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Order by Year"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Order by Year"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Order by Year.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year.Inputs[Input ordinamento].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      lineageId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year.Inputs[Input ordinamento].Columns[n_match]"
+                      cachedDataType="ui8"
+                      cachedName="n_match"
+                      lineageId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[n_match]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[year]"
+                      name="year"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[n_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento].Columns[n_match]"
+                      name="n_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1].Columns[n_match]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Order by Year2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Order by Year2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento].Columns[tourney_id]"
+                      cachedDataType="i4"
+                      cachedName="tourney_id"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento].Columns[count_match]"
+                      cachedDataType="ui8"
+                      cachedName="count_match"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento].Columns[tourney_name]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="tourney_name"
+                      lineageId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[year]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[year]"
+                      name="year"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_id]"
+                      name="tourney_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[count_match]"
+                      dataType="ui8"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[count_match]"
+                      name="count_match">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[count_match]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_name]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento].Columns[tourney_name]"
+                      name="tourney_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1].Columns[tourney_name]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\Retrieve Match"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Retrieve Match"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_6].[Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Solution Assignment2\Retrieve Match.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_6_DB.Group_6]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[tourney_id]"
+                      name="tourney_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].Columns[match_id]"
+                      name="match_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      dataType="i4"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      dataType="i4"
+                      name="match_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      dataType="i4"
+                      name="winner_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_id]"
+                      dataType="i4"
+                      name="loser_id" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="50"
+                      name="score" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[best_of]"
+                      dataType="i4"
+                      name="best_of" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[round]"
+                      dataType="wstr"
+                      length="10"
+                      name="round" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[minutes]"
+                      dataType="i4"
+                      name="minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_ace]"
+                      dataType="i4"
+                      name="w_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_df]"
+                      dataType="i4"
+                      name="w_df" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_svpt]"
+                      dataType="i4"
+                      name="w_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_1stIn]"
+                      dataType="i4"
+                      name="w_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_1stWon]"
+                      dataType="i4"
+                      name="w_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_2ndWon]"
+                      dataType="i4"
+                      name="w_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_SvGms]"
+                      dataType="i4"
+                      name="w_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_bpSaved]"
+                      dataType="i4"
+                      name="w_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[w_bpFaced]"
+                      dataType="i4"
+                      name="w_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_ace]"
+                      dataType="i4"
+                      name="l_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_df]"
+                      dataType="i4"
+                      name="l_df" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_svpt]"
+                      dataType="i4"
+                      name="l_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_1stIn]"
+                      dataType="i4"
+                      name="l_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_1stWon]"
+                      dataType="i4"
+                      name="l_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_2ndWon]"
+                      dataType="i4"
+                      name="l_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_SvGms]"
+                      dataType="i4"
+                      name="l_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_bpSaved]"
+                      dataType="i4"
+                      name="l_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[l_bpFaced]"
+                      dataType="i4"
+                      name="l_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_rank]"
+                      dataType="i4"
+                      name="winner_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[winner_rank_points]"
+                      dataType="i4"
+                      name="winner_rank_points" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_rank]"
+                      dataType="i4"
+                      name="loser_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB].ExternalColumns[loser_rank_points]"
+                      dataType="i4"
+                      name="loser_rank_points" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[tourney_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[tourney_id]"
+                      name="tourney_id" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      name="match_id" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\Retrieve Match.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Solution Assignment2\select max num match"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="select max num match"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale].Columns[n_match]"
+                      cachedDataType="ui8"
+                      cachedName="n_match"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[n_match]" />
+                    <inputColumn
+                      refId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale].Columns[count_match]"
+                      cachedDataType="ui8"
+                      cachedName="count_match"
+                      lineageId="Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[count_match]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Solution Assignment2\select max num match.Outputs[match_played]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="match_played"
+                  synchronousInputId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[count_match]} == #{Package\Solution Assignment2\Merge join.Outputs[Output merge join].Columns[n_match]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">count_match == n_match</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\select max num match.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Solution Assignment2\select max num match.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Solution Assignment2\select max num match.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\select max num match.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Solution Assignment2\select max num match.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Solution Assignment2\select max num match.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Solution Assignment2.Paths[match_played]"
+              endId="Package\Solution Assignment2\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="match_played"
+              startId="Package\Solution Assignment2\select max num match.Outputs[match_played]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Multicast Output 1]"
+              endId="Package\Solution Assignment2\Group by Year.Inputs[Input aggregazione 1]"
+              name="Multicast Output 1"
+              startId="Package\Solution Assignment2\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output aggregazione 1]"
+              endId="Package\Solution Assignment2\Multicast.Inputs[Multicast Input 1]"
+              name="Output aggregazione 1"
+              startId="Package\Solution Assignment2\Group by Year &amp; Tornament.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output aggregazione 11]"
+              endId="Package\Solution Assignment2\Order by Year.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Solution Assignment2\Group by Year.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output corrispondenza ricerca]"
+              endId="Package\Solution Assignment2\Add Year.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Solution Assignment2\Add Tournament.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Solution Assignment2\Group by Year &amp; Tornament.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Solution Assignment2\Add Year.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output merge join]"
+              endId="Package\Solution Assignment2\select max num match.Inputs[Input suddivisione condizionale]"
+              name="Output merge join"
+              startId="Package\Solution Assignment2\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output multicast 1]"
+              endId="Package\Solution Assignment2\Order by Year2.Inputs[Input ordinamento]"
+              name="Output multicast 1"
+              startId="Package\Solution Assignment2\Multicast.Outputs[Output multicast 1]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output ordinamento]"
+              endId="Package\Solution Assignment2\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Solution Assignment2\Order by Year.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output ordinamento1]"
+              endId="Package\Solution Assignment2\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Solution Assignment2\Order by Year2.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Solution Assignment2.Paths[Output origine OLE DB]"
+              endId="Package\Solution Assignment2\Add Tournament.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Solution Assignment2\Retrieve Match.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Solution Assignment2"
+          TopLeft="196.214288962131,111.794119137794" />
+        <AnnotationLayout
+          Text="Assignment 2: For each year, the name of the tournament with more matches played"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="476,60"
+          Id="02dc1192-b0b9-479b-969d-797366667411"
+          TopLeft="67.8571440127432,68.8235303769887" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Solution Assignment2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Solution Assignment2\Order by Year2"
+          TopLeft="860.181420544494,385.90850193232" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Solution Assignment2\Order by Year"
+          TopLeft="645.895702609515,385.90850193232" />
+        <NodeLayout
+          Size="120.8,41.6"
+          Id="Package\Solution Assignment2\Add Year"
+          TopLeft="993.856024880105,109.33006576225" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Solution Assignment2\Multicast"
+          TopLeft="763.538559618566,234.58496863821" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Solution Assignment2\Retrieve Match"
+          TopLeft="548.856018323593,107.447713636151" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Solution Assignment2\Group by Year &amp; Tornament"
+          TopLeft="955.125864979477,235.85294293294" />
+        <NodeLayout
+          Size="184.8,44.8"
+          Id="Package\Solution Assignment2\select max num match"
+          TopLeft="739.77325522865,521.261445007064" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Solution Assignment2\Destinazione file flat"
+          TopLeft="487.091838455061,524.222692936526" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Solution Assignment2\Add Tournament"
+          TopLeft="768.141735832824,108.3888896992" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Solution Assignment2\Merge join"
+          TopLeft="763.038561747304,450.90850284392" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Solution Assignment2\Group by Year"
+          TopLeft="643.752845430166,307.143794945322" />
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output origine OLE DB]"
+          TopLeft="697.656018323593,128.718301667676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.4857175092309,0"
+              Start="0,0"
+              End="62.9857175092309,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="62.9857175092309,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output ordinamento1]"
+          TopLeft="935.381420544494,427.50850193232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.34285879719,23.4000009115999"
+              Start="0,0"
+              End="-88.34285879719,15.9000009115999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.86666720687403" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.86666720687403"
+                    Point2="0,13.866667206874"
+                    Point3="-4,13.866667206874" />
+                  <mssgle:LineSegment
+                    End="-84.34285879719,13.866667206874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84.34285879719,13.866667206874"
+                    Point2="-88.34285879719,13.866667206874"
+                    Point3="-88.34285879719,17.866667206874" />
+                  <mssgle:LineSegment
+                    End="-88.34285879719,15.9000009115999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output ordinamento]"
+          TopLeft="717.895702609515,427.50850193232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89.1428591377889,23.4000009115999"
+              Start="0,0"
+              End="89.1428591377889,15.9000009115999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.86666720687403" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.86666720687403"
+                    Point2="0,13.866667206874"
+                    Point3="4,13.866667206874" />
+                  <mssgle:LineSegment
+                    End="85.1428591377889,13.866667206874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.1428591377889,13.866667206874"
+                    Point2="89.1428591377889,13.866667206874"
+                    Point3="89.1428591377889,17.866667206874" />
+                  <mssgle:LineSegment
+                    End="89.1428591377889,15.9000009115999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output multicast 1]"
+          TopLeft="842.205226285233,276.18496863821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.1761942592613,109.72353329411"
+              Start="0,0"
+              End="93.1761942592613,102.22353329411">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.755651738387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.755651738387"
+                    Point2="0,44.755651738387"
+                    Point3="4,44.755651738387" />
+                  <mssgle:LineSegment
+                    End="89.1761942592613,44.755651738387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.1761942592613,44.755651738387"
+                    Point2="93.1761942592613,44.755651738387"
+                    Point3="93.1761942592613,48.755651738387" />
+                  <mssgle:LineSegment
+                    End="93.1761942592613,102.22353329411" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output merge join]"
+          TopLeft="829.605908487977,492.50850284392">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.7529421631438"
+              Start="0,0"
+              End="0,21.2529421631438">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2529421631438" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output corrispondenza ricerca1]"
+          TopLeft="1057.49094492979,150.93006576225">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.9228771706902"
+              Start="0,0"
+              End="0,77.4228771706902">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.4228771706902" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,32.9067510853451,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output corrispondenza ricerca]"
+          TopLeft="925.741735832824,126.99000072928">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.1142890472803,0"
+              Start="0,0"
+              End="60.6142890472803,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.6142890472803,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-36.4787343826098,5,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output aggregazione 11]"
+          TopLeft="717.424274019841,348.743794945322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.1647069869981"
+              Start="0,0"
+              End="0,29.6647069869981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6647069869981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Output aggregazione 1]"
+          TopLeft="955.125864979478,256.018955785575">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.5873053609113,0"
+              Start="0,0"
+              End="-64.0873053609113,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-64.0873053609113,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[Multicast Output 1]"
+          TopLeft="804.8718929519,276.18496863821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-87.9190475217338,30.958826307112"
+              Start="0,0"
+              End="-87.9190475217338,23.458826307112">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.62794230947992" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.62794230947992"
+                    Point2="0,12.6279423094799"
+                    Point3="-4,12.6279423094799" />
+                  <mssgle:LineSegment
+                    End="-83.9190475217338,12.6279423094799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-83.9190475217338,12.6279423094799"
+                    Point2="-87.9190475217338,12.6279423094799"
+                    Point3="-87.9190475217338,16.6279423094799" />
+                  <mssgle:LineSegment
+                    End="-87.9190475217338,23.458826307112" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Solution Assignment2.Paths[match_played]"
+          TopLeft="739.77325522865,544.342068971795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-79.0814167735884,0"
+              Start="0,0"
+              End="-71.5814167735884,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-71.5814167735884,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-75.6973490117942,5,79.81328125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="1) Acquisizione dalla tabella Match, &#xD;&#xA;tramite comando OLE DB, dei dati:&#xA;- tourney_id&#xA;- match_id"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="218.4,88"
+          Id="d4c34d01-1c7e-4d0c-abba-7407da716902"
+          TopLeft="538.43538331916,28.0392160795139" />
+        <AnnotationLayout
+          Text="2) Utilizzo Lookup per acquisire tourney_name e date_id &#xA;(chiave esterna tourney_id) "
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="180.8,88"
+          Id="0e15cb7b-2422-45d3-ac25-1429451e21fa"
+          TopLeft="763.291087004129,25.1130104525894" />
+        <AnnotationLayout
+          Text="3) Utilizzo Lookup per acquisire year &#xA;(chiave esterna date_id)"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="239.2,56"
+          Id="63556363-6694-4f34-b4da-c75db11b0482"
+          TopLeft="994.387772036363,45.9686257183435" />
+        <AnnotationLayout
+          Text="4) Group by per ottenere in &quot;count_match&quot; = &#xD;&#xA;il numero di match giocati in ogni torneo in ogni anno&#xA;"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="316,72"
+          Id="ca30a590-2399-41fb-bd85-1497505d3154"
+          TopLeft="1184.38323461446,216.958357777755" />
+        <AnnotationLayout
+          Text="5) Group by per ottenere per ogni &#xD;&#xA;anno il numero massimo di match giocati.&#xD;&#xA;Quindi simile al raggruppamento precedente, &#xD;&#xA;ma usando come granularità YEAR"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="272.8,88"
+          Id="18920fdd-945a-497b-ba4a-df18aba18851"
+          TopLeft="376.90682975408,281.162585387277" />
+        <AnnotationLayout
+          Text="7) Seleziono le righe che hanno count_match==n_match &#xD;&#xA;(quindi numero di match disputati uguale al numero di match massimo&#xD;&#xA;ottenuto in quell'anno) in modo da prendere per ogni anno il torneo con numero&#xA; di match massimo giocati in quell'anno"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="458.4,88"
+          Id="04476e3a-30a7-4268-b96f-c762ad970c30"
+          TopLeft="945.181421992035,514.632872015748" />
+        <AnnotationLayout
+          Text="6) Ordiniamo entrambi i flussi per Year in modo &#xD;&#xA;da poterli ricombinare con il JOIN"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="282.4,56"
+          Id="187c6923-b7ee-43e2-b089-1d954ddb21ec"
+          TopLeft="1021.45456131226,421.978615543759" />
+        <AnnotationLayout
+          Text="7) Salvataggio nel file &quot;output_assignment2.txt&quot; del risultato&#xD;&#xA;nel formato: &quot;year, tourney_id, tourney_name, n_match&quot;"
+          ParentId="Package\Solution Assignment2"
+          FontInfo="{assembly:Null}"
+          Size="344.8,56"
+          Id="7647bf77-44ea-410b-bf4e-55de93ec0c66"
+          TopLeft="395.737998905942,572.012549746421" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment2\Add Year">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_6].[Date]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment2\Retrieve Match">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Solution Assignment2\Add Tournament">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_6].[Tournament]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
