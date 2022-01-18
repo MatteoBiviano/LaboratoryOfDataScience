@@ -1,0 +1,103 @@
+/*
+	LDS Group6 Query MDX
+	Matteo Biviano, Alice Graziani
+
+	- Il file contiene le soluzioni relative alle 3 query mdx richieste 
+	dal testo del progetto per il cubo costruito all'interno del progetto "group6_cube". 
+	- Per ogni assegnamento è stata definita una descrizione della soluzione implementata. 
+	- Per il secondo assegnamento viene riportata una seconda soluzione per completezza.
+*/
+------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+/*
+									Assignment 1
+Testo: 
+	Show the total winners for each country and the grand total with respect to the continent.
+Descrizione soluzione: 
+	- All'interno del membro "grand_total" è stato calcolato il totale del numero
+	di vincitori distinti per ogni continente, partendo dal paese attualmente considerato 
+	in riga, tramite "currentmember" ed accedendo al padre attraverso ".parent".
+	Se non si fosse usata la funzione "parent" la misura sarebbe stata calcolata su [Country Ioc],
+	presente in riga.
+	- E' stato inserito "nonempty" per countryioc in modo tale da escludere i paesi privi di vincitori.
+	- Per una visualizzazione più chiara del grand total, è stato inserito nelle righe anche il
+	continente al quale il paese appartiene.
+*/
+WITH MEMBER grand_total AS
+	([Geography_Winner].[Gerarchia].currentmember.parent,[Measures].[N winners distinct])
+SELECT {[Measures].[N winners distinct], grand_total} ON COLUMNS,
+	([Geography_Winner].[Continent].[Continent], NONEMPTY([Geography_Winner].[Gerarchia].[Country Ioc])) ON ROWS
+FROM [Group 6 DB];
+
+----------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+/*
+									Assignment 2
+Testo:
+	Show the total winner rank points for each year and the running yearly winner rank
+	points for European players.
+Descrizione soluzione:
+	- E' stato creato un member "running_yearly" per poter calcolare il running yearly, definito 
+	come la somma dal primo valore per Year (che sappiamo essere il 2016) fino all'anno preso in 
+	considerazione in riga, della misura "Winner Rank Points".
+	- Nella clausola where è stata ristretta la somma dei winner rank points ai player
+	provenienti dal continente europeo
+	- La funzione NONEMPTY per l'anno, nelle righe, è stata inserita per rendere la query più generica, 
+	benchè nel caso in esame non sono presenti anni nulli
+Nota: 
+	- Dato che "winner rank points" è una misura precalcolata per somma, la query avrebbe prodotto 
+	un risultato equivalente anche se avessimo sostituito la funzione SUM con la funzione AGGREGATE
+*/
+WITH MEMBER running_yearly AS
+sum(([Time].[DayMonthQuarterYear].[Year].&[2016]:[Time].[DayMonthQuarterYear].currentmember), 
+		[Measures].[Winner Rank Points])
+SELECT {[Measures].[Winner Rank Points], running_yearly} ON COLUMNS,
+	NONEMPTY([Time].[DayMonthQuarterYear].[Year]) on rows
+FROM [Group 6 DB]
+WHERE [Geography_Winner].[Continent].&[Europe];
+/*
+									Assignment 2 - Soluzione alternativa
+Descrizione soluzione:
+	- Rispetto alla query precedente, per determinare l'inizio del periodo da cui sommare il "running_yearly"
+	è stato utilizzata la combinazione "currentmember.firstsibling" per rendere la query più generica
+	e poter determinare il risultato senza aver bisogno di conoscere il primo anno da cui partire
+	(identificabile come primo fratello del membro corrente)
+*/
+WITH MEMBER running_yearly AS
+sum(([Time].[DayMonthQuarterYear].currentmember.FIRSTSIBLING:[Time].[DayMonthQuarterYear].currentmember),
+		[Measures].[Winner Rank Points])
+SELECT {[Measures].[Winner Rank Points], running_yearly} ON COLUMNS,
+	NONEMPTY([Time].[DayMonthQuarterYear].[Year]) on rows
+FROM [Group 6 DB]
+WHERE [Geography_Winner].[Continent].&[Europe];
+
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+/*
+									Assignment 3
+Testo:
+	Show the ratio between the total winner rank points of each year w.r.t the previous
+Descrizione soluzione:
+	- All'interno del membro "ratio" è stato calcolato il rapporto della misura "winner rank points"
+	per l'anno che si sta attualmente considerando in riga (definito tramite "currentmember") e
+	l'anno precedente (definito tramite "currentmember.lag(1)").
+	- Per evitare che in output venisse mostrato il valore "inf" quando l'anno corrente fosse il primo
+	di tutto il periodo (nel nostro caso 2016), è stato usato un comando condizionale in modo da restituire
+	0 quando il membro corrente non avesse avuto membri precedenti (currentmember.prevmember IS NULL).
+Nota: 
+	- Il risultato della query risulta equivalente se invece di utilizzare ".lag(1)" avessimo utilizzato
+	la funzione PARALLELPERIOD, come segue:
+		([Time].[DayMonthQuarterYear].currentmember, 
+		 [Measures].[Winner Rank Points])/
+			(PARALLELPERIOD(
+				[Time].[DayMonthQuarterYear].[Year], 1, [Time].[DayMonthQuarterYear].currentmember), 
+			[Measures].[Winner Rank Points]))
+*/
+WITH MEMBER ratio AS
+	IIF([Time].[DayMonthQuarterYear].currentmember.prevmember IS NULL, 0, 
+	  ([Time].[DayMonthQuarterYear].currentmember, 
+	  [Measures].[Winner Rank Points])/([Time].[DayMonthQuarterYear].currentmember.lag(1), 
+	  [Measures].[Winner Rank Points]))
+SELECT ratio ON COLUMNS,
+	[Time].[DayMonthQuarterYear].[Year] ON ROWS
+FROM [Group 6 DB];
